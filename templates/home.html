@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-align">Chatbot</h1>
+        <div id="chatbox">
+            <!-- Chat messages will be added here -->
+        </div>
+        <div class="input-field">
+            <input id="user_input" type="text" class="validate">
+            <label for="user_input">Your message</label>
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="sendMessage()">Send
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
