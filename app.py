@@ -1,9 +1,12 @@
 from flask import Flask, request, render_template
+from flask_cors import CORS
+
 import os
 import openai
 from dotenv import load_dotenv, find_dotenv
 
 app = Flask(__name__)
+CORS(app)
 
 _ = load_dotenv(find_dotenv()) # read local .env file
 openai.api_key  = os.getenv('OPENAI_API_KEY')
